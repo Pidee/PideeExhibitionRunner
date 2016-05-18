@@ -51,7 +51,14 @@ function startWebApp ( number ) {
 
     // Press the fullscreen key
     setTimeout( function () {
-         child_process.spawn( 'xte', [ '"key F11"', '-x:0' ] );
+         child_process.exec( 'xte', [ '"key F11"', '-x:0' ], function ( err, stdout, stderr ) {
+             if ( err ) {
+                 console.log( 'Error running key press', err );
+             }
+
+             console.log( 'stdout:', stdout );
+             console.log( 'stderr:', stderr );
+         });
     }, 25000 );
     
     
