@@ -5,7 +5,6 @@
 
 var child_process = require( 'child_process' );
 var os = require( 'os' );
-var fs = require( 'fs' );
 
 // Config
 // ======
@@ -30,10 +29,7 @@ getPideeValue( function ( value ) {
 // -------------
 
 function startVideoPlayer ( number ) {
-    getFilenameForNumber( 'videos', number, function ( filename ) {
-        console.log( 'Will play video', filename );
-        logProcess( 'omx', child_process.spawn( 'omxplayer', [ '-b', './videos/' + filename ] ) );
-    });
+    child_process.spawn( 'omxplayer', [ '-b', './videos/' + number + '.mov' ] );
 }
 
 // Startup Webapp
@@ -42,13 +38,10 @@ function startVideoPlayer ( number ) {
 function startWebApp ( number ) {
 
     // Start the webserver serving
-    logProcess( 'server', child_process.spawn( 'python', [ '-m', 'SimpleHTTPServer', '3000' ] ) );
+    logProcess( 'server',  child_process.spawn( 'python', [ '-m', 'SimpleHTTPServer', '3000' ] ) );
 
     // Start the browser
-    getFilenameForNumber( 'html', number, function ( filename ) {
-        console.log( 'Attempting to play:', filename );
-        logProcess( 'browser', child_process.spawn( './script-run-browser.sh', [ 'http://localhost:3000/html/' + filename ] ) );
-    });
+    logProcess( 'browser',  child_process.spawn( './script-run.sh', [ 'http://localhost:3000/' + number + '.html' ]
 }
 
 // Utils
@@ -56,34 +49,15 @@ function startWebApp ( number ) {
 
 function logProcess( name, process ) {
     process.stdout.on( 'data', function ( data ) {
-         console.log( name, '(stdout)', data.toString() );
+         console.log( name, '(stdout)', data );
     });
     process.stdin.on( 'data', function ( data ) {
-        console.log( name, '(stderr)', data.toString() );
+        console.log( name, '(stderr)', data );
     });
 }
 
 // Get Pidee Value
 // ---------------
-
-function getFilenameForNumber ( path, number, callback ) {
-
-    console.log( 'Looking for', path, number );
-
-    var process = child_process.spawn( './script-get-files.sh', [ path, number ] );
-
-    var files = '';
-
-    process.stdout.on( 'data', function ( data ) {
-         files += data.toString();
-    });
-
-    process.on( 'close', function () {
-        console.log( 'process finished with:', files );
-        callback( files.replace(/\n$/, '') );
-    });
-
-}
 
 function getPideeValue ( callback ) {
 
@@ -114,3 +88,15 @@ function getMaskIsSet ( value, mask ) {
     return (value & mask) !== 0;
 }
 
+
+// console.log("Hello World");
+
+// child_process.exec( './libpidee/examples/bin/print-dip', onPideeValue );
+
+// function onPideeValue ( error, stdout, stderror ) {
+
+// 	var pideeDipValue = parseInt( stdout, 10 );
+
+// 	console.log( 'value is', pideeDipValue );
+
+// }
