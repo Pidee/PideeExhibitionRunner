@@ -76,11 +76,13 @@ function getPideeValue ( callback ) {
         return;
     }
 
-    child_process.exec( './libpidee/examples/bin/print-dip', onPideeValue );
+    child_process.exec( './print-dip', onPideeValue );
 
     function onPideeValue ( error, stdout, stderror ) {
+        console.log( 'Print-dip:', stdout );
+        
             var value = parseInt( stdout, 10 );
-            console.log( 'Pidee value is', value );
+            console.log( 'Pidee value:', value );
             callback( value );
     }
     
