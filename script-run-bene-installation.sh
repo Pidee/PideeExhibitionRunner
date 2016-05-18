@@ -22,7 +22,7 @@ getPideeValue( function ( value ) {
         
     } else {
 
-        startWebApp( number );
+        startWebApp( value );
         
     }
     
