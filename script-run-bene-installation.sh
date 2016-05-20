@@ -70,7 +70,7 @@ function getFilenameForNumber ( path, number, callback ) {
 
     console.log( 'Looking for', path, number );
 
-    var process = child_process.spawn( __dirname + '/script-get-files.sh', [ path, number ] );
+    var process = child_process.spawn( __dirname + '/script-get-files.sh', [ path, number ], { cwd: __dirname } );
 
     var files = '';
 
