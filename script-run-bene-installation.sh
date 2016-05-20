@@ -32,7 +32,7 @@ getPideeValue( function ( value ) {
 function startVideoPlayer ( number ) {
     getFilenameForNumber( 'videos', number, function ( filename ) {
         console.log( 'Will play video', filename );
-        logProcess( 'omx', child_process.spawn( 'omxplayer', [ '-b', '--loop', './videos/' + filename ] ) );
+        logProcess( 'omx', child_process.spawn( 'omxplayer', [ '-b', '--loop', __dirname + '/videos/' + filename ] ) );
     });
 }
 
@@ -47,7 +47,7 @@ function startWebApp ( number ) {
     // Start the browser
     getFilenameForNumber( 'html', number, function ( filename ) {
         console.log( 'Attempting to play:', filename );
-        logProcess( 'browser', child_process.spawn( './script-run-browser.sh', [ 'http://localhost:3000/html/' + filename ] ) );
+        logProcess( 'browser', child_process.spawn( __dirname + '/script-run-browser.sh', [ 'http://localhost:3000/html/' + filename ] ) );
     });
 }
 
