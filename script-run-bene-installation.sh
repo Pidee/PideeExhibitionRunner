@@ -42,7 +42,7 @@ function startVideoPlayer ( number ) {
 function startWebApp ( number ) {
 
     // Start the webserver serving
-    logProcess( 'server', child_process.spawn( 'python', [ '-m', 'SimpleHTTPServer', '3000' ], { cwd: __dirname ) );
+    logProcess( 'server', child_process.spawn( 'python', [ '-m', 'SimpleHTTPServer', '3000' ], { cwd: __dirname } ) );
 
     // Start the browser
     getFilenameForNumber( 'html', number, function ( filename ) {
