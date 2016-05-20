@@ -70,7 +70,7 @@ function getFilenameForNumber ( path, number, callback ) {
 
     console.log( 'Looking for', path, number );
 
-    var process = child_process.spawn( './script-get-files.sh', [ path, number ] );
+    var process = child_process.spawn( __dirname + '/script-get-files.sh', [ path, number ] );
 
     var files = '';
 
@@ -98,7 +98,7 @@ function getPideeValue ( callback ) {
         return;
     }
 
-    child_process.exec( './print-dip', onPideeValue );
+    child_process.exec( __dirname + '/print-dip', onPideeValue );
 
     function onPideeValue ( error, stdout, stderror ) {
         console.log( 'Print-dip:', stdout );
