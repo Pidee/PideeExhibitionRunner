@@ -25,3 +25,56 @@ To load a videofile in `./videos/1-text-movies.mp4` the dip switch:
 |---|---|---|---|---|---|---|---|
 |ON|OFF|OFF|OFF|OFF|OFF|OFF|OFF|
 
+## Bene Exhbitions Settings
+
+#### 2. Inventor Computer
+
+|1|2|3|4|5|6|7|8|
+|---|---|---|---|---|---|---|---|
+|OFF|ON|OFF|OFF|OFF|OFF|OFF|OFF|
+
+#### 3. Inventor Video
+
+|1|2|3|4|5|6|7|8|
+|---|---|---|---|---|---|---|---|
+|ON|ON|OFF|OFF|OFF|OFF|OFF|ON|
+
+#### 4. Glitch
+
+|1|2|3|4|5|6|7|8|
+|---|---|---|---|---|---|---|---|
+|OFF|OFF|ON|OFF|OFF|OFF|OFF|ON|
+
+#### 5. Presentation Loop
+
+|1|2|3|4|5|6|7|8|
+|---|---|---|---|---|---|---|---|
+|ON|OFF|ON|OFF|OFF|OFF|OFF|ON|
+
+#### 6 .Boardroom Grid Display
+
+|1|2|3|4|5|6|7|8|
+|---|---|---|---|---|---|---|---|
+|OFF|OFF|OFF|OFF|OFF|OFF|OFF|ON|
+
+#### 7. PR Team 1
+
+|1|2|3|4|5|6|7|8|
+|---|---|---|---|---|---|---|---|
+|ON|OFF|OFF|OFF|OFF|OFF|OFF|OFF|
+
+#### 8. PR Team 2
+
+|1|2|3|4|5|6|7|8|
+|---|---|---|---|---|---|---|---|
+|ON|OFF|OFF|OFF|OFF|OFF|OFF|OFF|
+
+
+## Raspberry Pi Boot on LXDE load
+
+`nano ~/.config/lxsession/LXDE-pi/autostart` 
+
+then add
+
+`@lxterminal -e ` + the path to the startup script
+
