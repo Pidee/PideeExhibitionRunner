@@ -2,5 +2,5 @@
 
 
 epiphany-browser $1 &
-sleep 25
+sleep 40
 xte "key F11" -x:0
