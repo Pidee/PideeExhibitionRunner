@@ -1,5 +1,9 @@
 # Bene Installation Runner
 
+Bene Runner is a raspberry pi application. When the raspberry pi boots into desktop mode, Bene Runner can either play a video file fullscreen in a loop or load a local html file (webapp) in fullscreen mode. The file loaded is determined by a Pidee board. This allows for multiple video and html files to be stored on on raspberry pi sd card image. This same image can then be deployed to multiple unique installations.
+
+## Instructions
+
 To run: `./script-run-bene-installation`
 
 ## Pidee Setup
