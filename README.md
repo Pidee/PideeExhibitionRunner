@@ -13,13 +13,13 @@ The script will load `$-filename` where `$` is equal to the binary number set in
 
 ## Examples
 
-To load a videofile in `./videos/1-text-movies.mp4` the dip switch:
+To load a videofile in `./videos/1-test-movie.mp4` the dip switch:
 
 |1|2|3|4|5|6|7|8|
 |---|---|---|---|---|---|---|---|
 |ON|OFF|OFF|OFF|OFF|OFF|OFF|ON|
 
-To load a videofile in `./videos/1-text-movies.mp4` the dip switch:
+To load a webapp in `./html/1-something.mp4` the dip switch:
 
 |1|2|3|4|5|6|7|8|
 |---|---|---|---|---|---|---|---|
@@ -51,23 +51,23 @@ To load a videofile in `./videos/1-text-movies.mp4` the dip switch:
 |---|---|---|---|---|---|---|---|
 |ON|OFF|ON|OFF|OFF|OFF|OFF|ON|
 
-#### 6 .Boardroom Grid Display
+#### 6. Boardroom Grid Display
 
 |1|2|3|4|5|6|7|8|
 |---|---|---|---|---|---|---|---|
-|OFF|OFF|OFF|OFF|OFF|OFF|OFF|ON|
+|OFF|ON|ON|OFF|OFF|OFF|OFF|ON|
 
 #### 7. PR Team 1
 
 |1|2|3|4|5|6|7|8|
 |---|---|---|---|---|---|---|---|
-|ON|OFF|OFF|OFF|OFF|OFF|OFF|OFF|
+|ON|ON|ON|OFF|OFF|OFF|OFF|OFF|
 
 #### 8. PR Team 2
 
 |1|2|3|4|5|6|7|8|
 |---|---|---|---|---|---|---|---|
-|ON|OFF|OFF|OFF|OFF|OFF|OFF|OFF|
+|OFF|OFF|OFF|ON|OFF|OFF|OFF|OFF|
 
 
 ## Raspberry Pi Boot on LXDE load
