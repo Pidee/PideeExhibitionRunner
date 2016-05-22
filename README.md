@@ -19,15 +19,15 @@ The script will load `$-filename` where `$` is equal to the binary number set in
 
 To load a videofile in `./videos/1-test-movie.mp4` the dip switch:
 
-|1|2|3|4|5|6|7|8|
+|1|2|3|4|5|6|7|__8__|
 |---|---|---|---|---|---|---|---|
-|ON|OFF|OFF|OFF|OFF|OFF|OFF|ON|
+|ON|OFF|OFF|OFF|OFF|OFF|OFF|__ON__|
 
 To load a webapp in `./html/1-something.mp4` the dip switch:
 
-|1|2|3|4|5|6|7|8|
+|1|2|3|4|5|6|7|__8__|
 |---|---|---|---|---|---|---|---|
-|ON|OFF|OFF|OFF|OFF|OFF|OFF|OFF|
+|ON|OFF|OFF|OFF|OFF|OFF|OFF|__OFF__|
 
 ## Bene Exhbitions Settings
 
@@ -35,43 +35,43 @@ To load a webapp in `./html/1-something.mp4` the dip switch:
 
 |1|2|3|4|5|6|7|8|
 |---|---|---|---|---|---|---|---|
-|OFF|ON|OFF|OFF|OFF|OFF|OFF|OFF|
+|OFF|__ON__|OFF|OFF|OFF|OFF|OFF|OFF|
 
 #### 3. Inventor Video
 
 |1|2|3|4|5|6|7|8|
 |---|---|---|---|---|---|---|---|
-|ON|ON|OFF|OFF|OFF|OFF|OFF|ON|
+|__ON__|__ON__|OFF|OFF|OFF|OFF|OFF|__ON__|
 
 #### 4. Glitch
 
 |1|2|3|4|5|6|7|8|
 |---|---|---|---|---|---|---|---|
-|OFF|OFF|ON|OFF|OFF|OFF|OFF|ON|
+|OFF|OFF|__ON__|OFF|OFF|OFF|OFF|__ON__|
 
 #### 5. Presentation Loop
 
 |1|2|3|4|5|6|7|8|
 |---|---|---|---|---|---|---|---|
-|ON|OFF|ON|OFF|OFF|OFF|OFF|ON|
+|__ON__|OFF|__ON__|OFF|OFF|OFF|OFF|__ON__|
 
 #### 6. Boardroom Grid Display
 
 |1|2|3|4|5|6|7|8|
 |---|---|---|---|---|---|---|---|
-|OFF|ON|ON|OFF|OFF|OFF|OFF|ON|
+|OFF|__ON__|__ON__|OFF|OFF|OFF|OFF|__ON__|
 
 #### 7. PR Team 1
 
 |1|2|3|4|5|6|7|8|
 |---|---|---|---|---|---|---|---|
-|ON|ON|ON|OFF|OFF|OFF|OFF|OFF|
+|__ON__|__ON__|__ON__|OFF|OFF|OFF|OFF|OFF|
 
 #### 8. PR Team 2
 
 |1|2|3|4|5|6|7|8|
 |---|---|---|---|---|---|---|---|
-|OFF|OFF|OFF|ON|OFF|OFF|OFF|OFF|
+|OFF|OFF|OFF|__ON__|OFF|OFF|OFF|OFF|
 
 
 ## Raspberry Pi Boot on LXDE load
