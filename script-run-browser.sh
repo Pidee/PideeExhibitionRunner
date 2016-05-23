@@ -9,6 +9,6 @@ xte "key F11" -x:0
 # Prevent Screen Sleep
 while :
 do
-  sleep 1
+  sleep 100
   xte "key F1" -x:0
 done
