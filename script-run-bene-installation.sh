@@ -47,7 +47,7 @@ function startWebApp ( number ) {
     // Start the browser
     getFilenameForNumber( 'html', number, function ( filename ) {
         console.log( 'Attempting to play:', filename );
-        logProcess( 'browser', child_process.spawn( __dirname + '/script-run-browser.sh', [ 'http://localhost:3000/html/' + filename ] ) );
+        logProcess( 'browser', child_process.spawn( __dirname + '/script-run-browser.sh', [ 'http://0.0.0.0:3000/html/' + filename ] ) );
     });
 }
 
