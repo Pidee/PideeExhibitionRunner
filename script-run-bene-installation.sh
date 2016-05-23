@@ -32,7 +32,7 @@ getPideeValue( function ( value ) {
 function startVideoPlayer ( number ) {
     getFilenameForNumber( 'videos', number, function ( filename ) {
         console.log( 'Will play video', filename );
-        logProcess( 'omx', child_process.spawn( 'omxplayer', [ '-b', '--loop', __dirname + '/videos/' + filename ] ) );
+        logProcess( 'omx', child_process.spawn( 'omxplayer', [ '-b', '--loop', '--no-osd', __dirname + '/videos/' + filename ] ) );
     });
 }
 
