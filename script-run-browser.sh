@@ -10,5 +10,5 @@ xte "key F11" -x:0
 while :
 do
   sleep 1
-	xte "key F1" -x:0
+  xte "key F1" -x:0
 done
