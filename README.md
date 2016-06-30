@@ -39,9 +39,7 @@ To load a webapp in `./html/1-something.mp4` the dip switch:
 |---|---|---|---|---|---|---|---|
 |ON|OFF|OFF|OFF|OFF|OFF|OFF|__OFF__|
 
-### Case Study: Kavital for Bene's Exhibitions Settings
-
-
+## Case Study: Kavital for Bene's Exhibitions Settings
 
 During London's Clerkenwell Design Week, [The Workers](http://theworkers.net/)' staged a [fictitious company called Kavital Ltd.](http://theworkers.net/kavital), in the showrooms of [Bene](http://bene.com/). In this experience, there were fake computer displays powered by Raspberry Pi using the Pidee Exhibition Runner. 
 
