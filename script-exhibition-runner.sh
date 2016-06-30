@@ -47,7 +47,7 @@ function startWebApp ( number ) {
     // Start the browser
     getFilenameForNumber( 'html', number, function ( filename ) {
         console.log( 'Attempting to play:', filename );
-        logProcess( 'browser', child_process.spawn( __dirname + '/script-run-browser.sh', [ 'http://0.0.0.0:3000/html/' + filename ] ) );
+        logProcess( 'browser', child_process.spawn( __dirname + '/lib/script-run-browser.sh', [ 'http://0.0.0.0:3000/html/' + filename ] ) );
     });
 }
 
@@ -66,25 +66,6 @@ function logProcess( name, process ) {
 // Get Pidee Value
 // ---------------
 
-function getFilenameForNumber ( path, number, callback ) {
-
-    console.log( 'Looking for', path, number );
-
-    var process = child_process.spawn( __dirname + '/script-get-files.sh', [ path, number ], { cwd: __dirname } );
-
-    var files = '';
-
-    process.stdout.on( 'data', function ( data ) {
-         files += data.toString();
-    });
-
-    process.on( 'close', function () {
-        console.log( 'process finished with:', files );
-        callback( files.replace(/\n$/, '') );
-    });
-
-}
-
 function getPideeValue ( callback ) {
 
     var platform = os.platform();
@@ -98,7 +79,7 @@ function getPideeValue ( callback ) {
         return;
     }
 
-    child_process.exec( __dirname + '/print-dip', onPideeValue );
+    child_process.exec( __dirname + '/lib/print-dip', onPideeValue );
 
     function onPideeValue ( error, stdout, stderror ) {
         console.log( 'Print-dip:', stdout );
@@ -113,4 +94,24 @@ function getPideeValue ( callback ) {
 function getMaskIsSet ( value, mask ) {
     return (value & mask) !== 0;
 }
+
+function getFilenameForNumber ( path, number, callback ) {
+
+    console.log( 'Looking for', path, number );
+
+    var process = child_process.spawn( __dirname + '/lib/script-get-files.sh', [ path, number ], { cwd: __dirname } );
+
+    var files = '';
+
+    process.stdout.on( 'data', function ( data ) {
+         files += data.toString();
+    });
+
+    process.on( 'close', function () {
+        console.log( 'process finished with:', files );
+        callback( files.replace(/\n$/, '') );
+    });
+
+}
+
 
