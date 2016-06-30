@@ -1,6 +1,9 @@
 # Pidee Exhibition Runner
 
-Pidee Exhibition Runner is a script for booting a [Raspberry Pi](https://www.raspberrypi.org/) into a either a fullscreen looping video or chrome-less web app.
+Pidee Exhibition Runner is a script for booting a [Raspberry Pi](https://www.raspberrypi.org/) into: 
+
+- a fullscreen looping video, or 
+- chrome-less web app.
 
 The video or html file is selected by the Pidee board. 
 
