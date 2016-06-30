@@ -15,6 +15,15 @@ This allows multiple videos and web apps to be on the same SD card, useful is yo
 
 To run: `./script-exhibition-runner.sh`
 
+#### To run on LXDE start up
+
+`nano ~/.config/lxsession/LXDE-pi/autostart` 
+
+then add
+
+`@lxterminal -e ` + the path to the `script-exhibition-runner.sh`
+
+
 ## Pidee Setup
 
 To play a __video__ set dip __switch 8 to `ON`__.  
@@ -96,13 +105,4 @@ The configuration is below.
 |1|2|3|4|5|6|7|8|
 |---|---|---|---|---|---|---|---|
 |OFF|OFF|OFF|__ON__|OFF|OFF|OFF|OFF|
-
-
-## Raspberry Pi Boot on LXDE load
-
-`nano ~/.config/lxsession/LXDE-pi/autostart` 
-
-then add
-
-`@lxterminal -e ` + the path to the startup script
 
